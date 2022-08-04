@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:project="clr-namespace:ForLeonid.Project"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ForLeonid.Project.ProjectView">
+	<UserControl.DataContext>
+		<project:ProjectViewModel />
+	</UserControl.DataContext>
+	<!--<ContentControl Content="{Binding GridProject}"/>-->
+	<Grid ColumnDefinitions="*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*">
+		<TextBlock Grid.Column="0" Text="Проекты" />
+		<GridSplitter  Grid.Column="1" Background="Black" MinWidth="3"/>
+		<TextBlock Grid.Column="2" Text="Январь" />
+	</Grid>
+</UserControl>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLeonid", "ForLeonid.csproj", "{B9729504-C4E5-46D2-A5E1-0C924CAC0514}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLeonid", "ForLeonid\ForLeonid.csproj", "{B9729504-C4E5-46D2-A5E1-0C924CAC0514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

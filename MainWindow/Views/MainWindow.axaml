@@ -3,6 +3,7 @@
         xmlns:vm="using:ForLeonid.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:topMenu="clr-namespace:ForLeonid.MainMenu"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ForLeonid.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -11,7 +12,10 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+	<Grid RowDefinitions="Auto,*">
+		<topMenu:TopMenu />
+        <ContentControl Grid.Row="1" Margin="0,5,0,0" Content="{Binding Content}"/>
+	</Grid>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 </Window>

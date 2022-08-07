@@ -10,7 +10,7 @@ namespace ForLeonid.Models
     {
         public string FIO { get; set; }
         public string JobTitle { get; set; }
-        public List<Project> Projects { get; set; }
+        public List<TaskForProject> Tasks { get; set; }
         //public string 
     }
 }

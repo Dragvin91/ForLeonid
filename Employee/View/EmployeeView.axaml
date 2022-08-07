@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:ForLeonid.Employee"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ForLeonid.Employee.EmployeeView">
+    <UserControl.DataContext>
+        <viewmodel:EmployeeViewModel/>
+    </UserControl.DataContext>
+    <DataGrid
+        AutoGenerateColumns="False"
+    >
+        <DataGrid.Columns>
+            <DataGridTemplateColumn Header="Сотрудники">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding FIO}"/>
+                            <TextBlock Text="{Binding Position}"/>
+                            <TextBlock Text="{Binding EB}"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Активные задачи: "/>
+                                <TextBlock Text="{Binding CountTask}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn >
+				<DataGridTemplateColumn.Header>
+                    <StackPanel>
+                        <TextBlock Text="{Binding NameFirstMounth}"/>
+                        <ContentControl Content="{Binding GridDaysFirstMounth}"/>
+                    </StackPanel>
+                </DataGridTemplateColumn.Header>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ContentControl Content="{Binding GridFirstMounth}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn >
+                <DataGridTemplateColumn.Header>
+                    <StackPanel>
+                        <TextBlock Text="{Binding NameSecondMounth}"/>
+                        <ContentControl Content="{Binding GridDaysSecondMounth}"/>
+                    </StackPanel>
+                </DataGridTemplateColumn.Header>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ContentControl Content="{Binding GridSecondMounth}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn >
+                <DataGridTemplateColumn.Header>
+                    <StackPanel>
+                        <TextBlock Text="{Binding NameThirdMounth}"/>
+                        <ContentControl Content="{Binding GridDaysThirdMounth}"/>
+                    </StackPanel>
+                </DataGridTemplateColumn.Header>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ContentControl Content="{Binding GridThirdMounth}"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

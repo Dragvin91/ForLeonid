@@ -10,8 +10,6 @@
 	</UserControl.DataContext>
 	<!--<ContentControl Content="{Binding GridProject}"/>-->
 	<Grid ColumnDefinitions="*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*,Auto,*">
-		<TextBlock Grid.Column="0" Text="Проекты" />
-		<GridSplitter  Grid.Column="1" Background="Black" MinWidth="3"/>
-		<TextBlock Grid.Column="2" Text="Январь" />
+	
 	</Grid>
 </UserControl>
